@@ -13,10 +13,10 @@ export default function Home() {
           <div className="col p-0">
             <div className="d-flex flex-row">
               <ArrowLeftCircleIcon className="me-3 hand-cursor" style={{width:"40px"}} onClick={() => router.push("/")}/>
-              <h1>Añadir nueva</h1>
+              <h1>Adobe</h1>
             </div>
             <div className="d-flex flex-row align-items-stretch">
-              <p className="ps-2 pt-4 fs-4">Asegúrate de que la información proporcionada sea precisa y completa. Los datos ingresados serán utilizados para conectar tu startup con posibles colaboradores e inversionistas.</p>
+              <p className="ps-2 pt-4 fs-4">Las startups aquí listadas representan el talento e innovación de nuestra comunidad escolar. Explora sus perfiles, conoce sus objetivos y encuentra oportunidades para colaborar o apoyar sus iniciativas. Recuerda que cada proyecto está en una etapa única de desarrollo</p>
             </div>
           </div>
         </div>
@@ -56,7 +56,7 @@ export default function Home() {
                 className="form-control form-control-lg"
                 id="descripcion"
                 rows="3"
-                style={{ minHeight: "270px" }}
+                style={{ minHeight: "240px" }}
               ></textarea>
             </div>
           </form>

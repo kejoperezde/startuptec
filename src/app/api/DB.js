@@ -5,7 +5,7 @@ data = {
       "example_description": "Adidas combines performance and style in sportswear, providing athletes with high-quality apparel, footwear, and accessories. Whether you\\'re training or competing, Adidas ensures you have the gear to excel and make a statement.",
       "example_title": "Performance and style in sportswear",
       "logo": "https://logotypes.dev/static/logos/adidas-wordmark-color.svg",
-      "name": "Adidas",
+      "name": "Adidas", 
       "variant": "wordmark",
       "version": "color"
     },
