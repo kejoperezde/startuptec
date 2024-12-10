@@ -20,6 +20,10 @@ export default function Home() {
             <div className="d-flex flex-row align-items-stretch">
               <p className="ps-2 pt-4 fs-4">Las startups aquí listadas representan el talento e innovación de nuestra comunidad escolar. Explora sus perfiles, conoce sus objetivos y encuentra oportunidades para colaborar o apoyar sus iniciativas. Recuerda que cada proyecto está en una etapa única de desarrollo</p>
             </div>
+            <div className='divBut'>
+              <button className='butModif'>Eliminar</button>
+              <button className='butModif'>Editar</button>
+            </div>
           </div>
         </div>
       </div>
