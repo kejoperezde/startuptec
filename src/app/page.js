@@ -1,9 +1,14 @@
-'use client'
+"use client";
 
-import { useRouter } from 'next/navigation'
+import { useRouter } from "next/navigation";
+import { data } from "./api/DB.js";
 
 export default function Home() {
-  const router = useRouter()
+  const router = useRouter();
+
+  data.map((item) => {
+    console.log(item);
+  });
   
   return (
     <div className="row p-0 h-100">
@@ -47,7 +52,13 @@ export default function Home() {
       <div className="col-8 py-4 px-5 bg-secondary">
         <div className="row h-100 rounded-3 bg-primary p-4">
           <div className="overflow-auto">
-            <h1 className='hand-cursor' onClick={() => router.push("/startuptec")}>Contenido</h1>
+            <h1
+              className="hand-cursor"
+              onClick={() => router.push("/startuptec")}
+            >
+              Contenido
+            </h1>
+            <img src="https://logotypes.dev/static/logos/linkedin-wordmark-color.svg" />
           </div>
         </div>
       </div>

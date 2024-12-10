@@ -5,6 +5,7 @@ import { ArrowLeftCircleIcon } from "@heroicons/react/20/solid";
 
 export default function Home() {
   const router = useRouter()
+  data.id
 
   return (
     <div className="row p-0 h-100">
