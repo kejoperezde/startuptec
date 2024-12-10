@@ -17,7 +17,11 @@ export default function Home() {
   };
 
   const handleEdit = (id) => {
-    router.push(`/editar/${id}`); // Aqui debe de ser a editar pero no se donde esta esa pagina ajaj
+    router.push(`./startuptec/page.js${id}`); // Aqui debe de ser a editar pero no se donde esta esa pagina ajaj
+  };
+
+  const handleNewPag = () => {
+    router.push(`./startuptec/`);
   };
 
   //Bsqueda
@@ -82,11 +86,12 @@ export default function Home() {
             {filteredData.slice(0, 12).map((startup) => (
               <div key={startup.id} className="col">
                 <div className="card text-center p-3 card-custom" style={{ height: '300px'}} >
-                  <img
-                    src={startup.logo}
-                    alt={`${startup.name} logo`}
-                    className="card-img-top mx-auto mb-3"
-                  />
+                    <img
+                      src={startup.logo}
+                      alt={`${startup.name} logo`}
+                      className="card-img-top mx-auto mb-3"
+                      onClick={() => handleNewPag()}
+                    />
                   <h5 className="card-title">{startup.name}</h5>
                   <div className="d-flex justify-content-between mt-auto">
                     <button
