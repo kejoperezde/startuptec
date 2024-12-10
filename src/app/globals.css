@@ -87,3 +87,11 @@ a {
 .search-bar input::placeholder {
   color: white !important; 
 }
+
+.div1{
+  background-color: #0a0a0a !important;
+}
+
+.frase{
+  color: #d6d3d3;
+}
