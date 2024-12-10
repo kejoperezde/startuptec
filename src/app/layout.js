@@ -1,5 +1,5 @@
 import localFont from "next/font/local";
-import "./globals.css";
+import "./globals.css"; 
 import Bootstrap from "./services/Bootstrap";
 
 export const metadata = {
@@ -12,7 +12,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Bootstrap />
       <body>
-        <container className="container-fluid p-0 vh-100">{children}</container>
+        {}
+        <div className="container-fluid p-0 vh-100">{children}</div>
       </body>
     </html>
   );
