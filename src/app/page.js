@@ -83,7 +83,7 @@ export default function Home() {
                     onClick={() => handleEdit(startup.id)}
                   />
                   <h5 className="card-title">{startup.name}</h5>
-                  <div className="d-flex justify-content-between mt-auto">
+                  {/* <div className="d-flex justify-content-between mt-auto">
                     <button
                       className="btn btn-danger btn-sm"
                       onClick={() => handleDelete(startup.id)}
@@ -96,7 +96,7 @@ export default function Home() {
                     >
                       Editar
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ))}
