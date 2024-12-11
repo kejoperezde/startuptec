@@ -116,3 +116,16 @@ a {
   background-color: #0a0a0a;
   color: white;
 }
+
+.divLogo{
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: #ffffff;
+  width: auto;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.labelInline{
+  display: block;
+}
