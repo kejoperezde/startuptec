@@ -1,6 +1,4 @@
-"use client"; 
-// Hola yo Dulce hice esta y le movi al css
-
+"use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { data as initialData } from "./api/DB.js"; 
@@ -17,25 +15,21 @@ export default function Home() {
   };
 
   const handleEdit = (id) => {
-    router.push(`./startuptec/page.js${id}`); // Aqui debe de ser a editar pero no se donde esta esa pagina ajaj
+    router.push(`/startuptec?id=${id}`); // Redirige al detalle/edición con el id
   };
 
-  const handleNewPag = () => {
-    router.push(`./startuptec/`);
-  };
-
-  //Bsqueda
-  const filteredData = data.filter(startup =>
-    startup.name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value);
   };
 
+  const filteredData = data.filter((startup) =>
+    startup.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <div className="row p-0 h-100">
-      {/* Columna izquierda*/}
-      <div className="col-4 py-4 px-5 bg-left"style={{ flexShrink: 0 }}>
+      {/* Columna izquierda */}
+      <div className="col-4 py-4 px-5 bg-left" style={{ flexShrink: 0 }}>
         <div className="row h-100 rounded-3 bg-secondary p-4 d-flex flex-column">
           <div className="col p-0">
             <div className="d-flex flex-row">
@@ -48,7 +42,6 @@ export default function Home() {
                 profesores.
               </p>
             </div>
-            
             <div className="d-flex flex-column">
               <div className="d-flex flex-row mb-4">
                 <form className="w-100">
@@ -63,13 +56,11 @@ export default function Home() {
                   </div>
                 </form>
               </div>
-              
-              {/* Botón "Añadir nueva"*/}
               <div className="mt-3">
                 <button
                   type="button"
                   className="btn btn-primary btn-lg"
-                  onClick={() => router.push("/crear")}
+                  onClick={() => router.push("/startuptec")} // Crear nueva startup
                 >
                   Añadir nueva
                 </button>
@@ -78,20 +69,19 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       {/* Columna derecha */}
-      <div className="col-8 py-4 px-5" style={{ backgroundColor: '#6c757d'}} >
+      <div className="col-8 py-4 px-5" style={{ backgroundColor: '#6c757d' }}>
         <div className="row h-100 rounded-3 bg-primary p-4">
           <div className="row row-cols-1 row-cols-md-4 g-4 overflow-auto">
-            {filteredData.slice(0, 12).map((startup) => (
+            {filteredData.map((startup) => (
               <div key={startup.id} className="col">
-                <div className="card text-center p-3 card-custom" style={{ height: '300px'}} >
-                    <img
-                      src={startup.logo}
-                      alt={`${startup.name} logo`}
-                      className="card-img-top mx-auto mb-3"
-                      onClick={() => handleNewPag()}
-                    />
+                <div className="card text-center p-3 card-custom" style={{ height: '300px' }}>
+                  <img
+                    src={startup.logo}
+                    alt={`${startup.name} logo`}
+                    className="card-img-top mx-auto mb-3"
+                    onClick={() => handleEdit(startup.id)}
+                  />
                   <h5 className="card-title">{startup.name}</h5>
                   <div className="d-flex justify-content-between mt-auto">
                     <button
