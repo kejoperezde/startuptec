@@ -19,10 +19,9 @@ export default function StartupDetails() {
     return <div>No se encontró la startup</div>;
   }
 
-  const handleDelete = () => {
-    const updatedData = data.filter((item) => item.id !== startup.id);
-    setData(updatedData);
-    router.push("/");
+  const handleDeleteStartup = () => {
+    // Redirigir a la página principal con el ID a eliminar
+    router.push(`/?deleteId=${startup.id}`);
   };
 
   const handleSave = () => {
@@ -50,7 +49,7 @@ export default function StartupDetails() {
               Las startups aquí listadas representan el talento e innovación de nuestra comunidad escolar.
             </p>
             <div className="divBut">
-              <button className="butModif" onClick={handleDelete}>Eliminar</button>
+              <button className="butModif" onClick={handleDeleteStartup}>Eliminar</button>
               <button className="butModif" onClick={handleSave}>Editar</button>
             </div>
           </div>
