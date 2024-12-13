@@ -1,18 +1,22 @@
 "use client";
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useState, useEffect  } from "react";
+import { useRouter, useSearchParams  } from "next/navigation";
 import { data as initialData } from "./api/DB.js"; 
 import './globals.css';
 
 export default function Home() {
   const router = useRouter();
-  const [data, setData] = useState(initialData); 
+  const [data, setData] = useState(initialData);
+  const searchParams = useSearchParams(); 
+  const deleteId = searchParams.get("deleteId"); // ID recibido para eliminar
   const [searchQuery, setSearchQuery] = useState(''); 
 
-  const handleDelete = (id) => {
-    const updatedData = data.filter((startup) => startup.id !== id); 
-    setData(updatedData); 
-  };
+  useEffect(() => {
+    if (deleteId) {
+      setData((prevData) => prevData.filter((startup) => startup.id !== parseInt(deleteId)));
+      router.replace("/"); // Limpiar el parámetro de la URL
+    }
+  }, [deleteId, router]);
 
   const handleEdit = (id) => {
     router.push(`/startuptec?id=${id}`); // Redirige al detalle/edición con el id
