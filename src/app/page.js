@@ -81,7 +81,7 @@ export default function Home() {
                 <button
                   type="button"
                   className="btn btn-primary btn-lg"
-                  onClick={() => router.push("/startuptec")} // Crear nueva startup
+                  onClick={() => router.push("/crear")} // Crear nueva startup
                 >
                   Añadir nueva
                 </button>
@@ -93,10 +93,10 @@ export default function Home() {
       {/* Columna derecha */}
       <div className="col-8 py-4 px-5" style={{ backgroundColor: '#6c757d' }}>
         <div className="row h-100 rounded-3 bg-primary p-4">
-          <div className="row row-cols-1 row-cols-md-4 g-4 overflow-auto">
+          <div className="divScroll row row-cols-1 row-cols-md-4 g-4 overflow-auto">
             {filteredData.map((startup) => (
               <div key={startup.id} className="col">
-                <div className="card text-center p-3 card-custom" style={{ height: '300px' }}>
+                <div className="divImg card text-center p-3 card-custom" style={{ height: '300px' }}>
                   <img
                     src={startup.logo}
                     alt={`${startup.name} logo`}
