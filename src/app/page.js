@@ -9,6 +9,11 @@ export default function Home() {
   const [data, setData] = useState(initialData);
   const searchParams = useSearchParams(); 
   const deleteId = searchParams.get("deleteId"); // ID recibido para eliminar
+  const updatedId = searchParams.get("id"); // Startup editada
+  const updatedName = searchParams.get("name");
+  const updatedLogo = searchParams.get("logo");
+  const updatedSlogan = searchParams.get("slogan");
+  const updatedDescription = searchParams.get("description");
   const [searchQuery, setSearchQuery] = useState(''); 
 
   useEffect(() => {
@@ -16,9 +21,21 @@ export default function Home() {
       setData((prevData) => prevData.filter((startup) => startup.id !== parseInt(deleteId)));
       router.replace("/"); // Limpiar el parámetro de la URL
     }
-  }, [deleteId, router]);
+  // Manejo de actualización
+  if (updatedId) {
+    setData((prevData) =>
+      prevData.map((startup) =>
+        startup.id === parseInt(updatedId)
+          ? { ...startup, name: updatedName, logo: updatedLogo, example_title: updatedSlogan, example_description: updatedDescription }
+          : startup
+      )
+    );
+    router.replace("/"); // Limpiar el parámetro de la URL
+  }
+}, [deleteId, updatedId, updatedName, updatedLogo, updatedSlogan, updatedDescription, router]);
 
-  const handleEdit = (id) => {
+  const handleEdit = (e, id) => {
+    e.preventDefault();
     router.push(`/startuptec?id=${id}`); // Redirige al detalle/edición con el id
   };
 
@@ -84,7 +101,7 @@ export default function Home() {
                     src={startup.logo}
                     alt={`${startup.name} logo`}
                     className="card-img-top mx-auto mb-3"
-                    onClick={() => handleEdit(startup.id)}
+                    onClick={(e) => handleEdit(e, startup.id)}
                   />
                   <h5 className="card-title">{startup.name}</h5>
                   {/* <div className="d-flex justify-content-between mt-auto">
