@@ -133,3 +133,12 @@ a {
 .divImg{
   background-color: #ffffff !important;
 }
+
+.divScroll{
+  max-height: 500px;
+  overflow-Y: 'auto';
+}
+.divScroll2{
+  max-height: 590px;
+  overflow-Y: 'auto';
+}
