@@ -57,8 +57,8 @@ export default function StartupDetails() {
               Las startups aquí listadas representan el talento e innovación de nuestra comunidad escolar.
             </p>
             <div className="divBut">
-              <button className="butModif" onClick={(e)=>handleDeleteStartup(e)}>Eliminar</button>
-              <button className="butModif" onClick={handleSave}>Editar</button>
+              <button className="butModif form-control-lg" onClick={(e)=>handleDeleteStartup(e)}>Eliminar</button>
+              <button className="butModif form-control-lg" onClick={handleSave}>Editar</button>
             </div>
           </div>
         </div>
