@@ -21,9 +21,11 @@ export default function StartupDetails() {
 
   const handleDeleteStartup = (e) => {
     // Redirigir a la página principal con el ID a eliminar
-    
-    router.push(`/?deleteId=${startup.id}`);
-    e.preventDefault();
+    const confirmEdit = window.confirm("¿Estás seguro de que deseas eliminar esta startup?");
+    if (confirmEdit) {
+      router.push(`/?deleteId=${startup.id}`);
+      e.preventDefault();
+    }
   };
 
   const handleSave = (e) => {
@@ -68,7 +70,7 @@ export default function StartupDetails() {
         </div>
       </div>
       <div className="col-8 py-4 px-5 bg-secondary">
-        <div className="row h-100 rounded-3 bg-primary p-4">
+        <div className="divScroll2 row h-100 rounded-3 bg-primary p-4 overflow-auto">
           <form>
             <div className="mb-3">
               <label htmlFor="nombre" className="form-label">Nombre</label>
