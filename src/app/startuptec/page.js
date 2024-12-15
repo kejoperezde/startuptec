@@ -28,16 +28,20 @@ export default function StartupDetails() {
 
   const handleSave = (e) => {
     e.preventDefault();
-    // Pasar los datos actualizados como query params a la página principal
-    const query = new URLSearchParams({
-      id: startup.id,
-      name: startup.name,
-      logo: startup.logo,
-      slogan: startup.example_title,
-      description: startup.example_description,
-    }).toString();
+    const confirmEdit = window.confirm("¿Estás seguro de que deseas actualizar esta startup?");
 
-    router.push(`/?${query}`);
+    if (confirmEdit) {
+      // Pasar los datos actualizados como query params a la página principal
+      const query = new URLSearchParams({
+        id: startup.id,
+        name: startup.name,
+        logo: startup.logo,
+        slogan: startup.example_title,
+        description: startup.example_description,
+      }).toString();
+
+      router.push(`/?${query}`);
+    }
   };
 
   return (
@@ -58,7 +62,7 @@ export default function StartupDetails() {
             </p>
             <div className="divBut">
               <button className="butModif form-control-lg" onClick={(e)=>handleDeleteStartup(e)}>Eliminar</button>
-              <button className="butModif form-control-lg" onClick={handleSave}>Editar</button>
+              <button className="butModif form-control-lg" onClick={handleSave}>Actualizar</button>
             </div>
           </div>
         </div>
