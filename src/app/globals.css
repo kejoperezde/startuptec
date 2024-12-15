@@ -129,3 +129,7 @@ a {
 .labelInline{
   display: block;
 }
+
+.hola{
+  background-color: #ffffff !important;
+}
