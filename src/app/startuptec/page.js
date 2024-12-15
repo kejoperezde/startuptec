@@ -19,17 +19,25 @@ export default function StartupDetails() {
     return <div>No se encontró la startup</div>;
   }
 
-  const handleDeleteStartup = () => {
+  const handleDeleteStartup = (e) => {
     // Redirigir a la página principal con el ID a eliminar
+    
     router.push(`/?deleteId=${startup.id}`);
+    e.preventDefault();
   };
 
-  const handleSave = () => {
-    const updatedData = data.map((item) =>
-      item.id === startup.id ? startup : item
-    );
-    setData(updatedData);
-    router.push("/");
+  const handleSave = (e) => {
+    e.preventDefault();
+    // Pasar los datos actualizados como query params a la página principal
+    const query = new URLSearchParams({
+      id: startup.id,
+      name: startup.name,
+      logo: startup.logo,
+      slogan: startup.example_title,
+      description: startup.example_description,
+    }).toString();
+
+    router.push(`/?${query}`);
   };
 
   return (
@@ -49,7 +57,7 @@ export default function StartupDetails() {
               Las startups aquí listadas representan el talento e innovación de nuestra comunidad escolar.
             </p>
             <div className="divBut">
-              <button className="butModif" onClick={handleDeleteStartup}>Eliminar</button>
+              <button className="butModif" onClick={(e)=>handleDeleteStartup(e)}>Eliminar</button>
               <button className="butModif" onClick={handleSave}>Editar</button>
             </div>
           </div>
