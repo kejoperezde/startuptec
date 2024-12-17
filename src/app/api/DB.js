@@ -1,212 +1,202 @@
 export let data = [
   {
     "example_description":
-      "Adidas combines performance and style in sportswear, providing athletes with high-quality apparel, footwear, and accessories. Whether you\\'re training or competing, Adidas ensures you have the gear to excel and make a statement.",
-    "example_title": "Performance and style in sportswear",
+      "Adidas combina rendimiento y estilo en ropa deportiva, proporcionando a los atletas ropa, calzado y accesorios de alta calidad. Ya sea que estés entrenando o compitiendo, Adidas se asegura de que tengas el equipo para sobresalir y hacer una declaración",
+    "example_title": "Rendimiento y estilo en ropa deportiva",
     "logo": "https://logotypes.dev/static/logos/adidas-wordmark-color.svg",
     "name": "Adidas",
-    "variant": "wordmark",
-    "version": "color",
-    "id": 1
+    "id": 1,
   },
   {
     "example_description":
-      "Apple is a multinational technology company that designs, manufactures, and markets consumer electronics, computer software, and online services. The company is known for its innovative products, including the iPhone, iPad, Mac, Apple Watch, and Apple TV.",
-    "example_title": "Innovative technology products",
+      "Apple es una empresa multinacional de tecnología que diseña, fabrica y comercializa productos electrónicos de consumo, software informático y servicios en línea. La compañía es conocida por sus productos innovadores, incluidos el iPhone, iPad, Mac, Apple Watch y Apple TV",
+    "example_title": "Productos tecnológicos innovadores",
     "logo": "https://logotypes.dev/static/logos/apple-glyph-black.svg",
     "name": "Apple",
-    "variant": "wordmark",
-    "version": "color",
-    "id": 2
+    "id": 2,
   },
   {
     "example_description":
-      "Google is a technology company that specializes in internet-related services and products. The company\\'s mission is to organize the world\\'s information and make it universally accessible and useful. Google\\'s products include search, advertising, and cloud computing.",
-    "example_title": "Organizing the world\\'s information",
+      "Google es una empresa de tecnología que se especializa en servicios y productos relacionados con Internet. La misión de la empresa es organizar la información del mundo y hacerla universalmente accesible y útil. Los productos de Google incluyen búsqueda, publicidad y computación en la nube",
+    "example_title": "Organizar la información del mundo",
     "logo": "https://logotypes.dev/static/logos/google-wordmark-color.svg",
     "name": "Google",
-    "variant": "wordmark",
-    "version": "color",
-    "id": 3
+    "id": 3,
   },
   {
     "example_description":
-      "Microsoft is a technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, and personal computers. The company is known for its Windows operating system and Office productivity suite.",
-    "example_title": "Software and technology solutions",
+      "Microsoft es una empresa de tecnología que desarrolla, fabrica, licencia, da soporte y vende software informático, electrónica de consumo y computadoras personales. La compañía es conocida por su sistema operativo Windows y la suite de productividad Office",
+    "example_title": "Software y soluciones tecnológicas",
     "logo": "https://logotypes.dev/static/logos/microsoft-wordmark-color.svg",
     "name": "Microsoft",
-    "variant": "wordmark",
-    "version": "color",
-    "id": 4
+    "id": 4,
   },
   {
     "example_description":
-      "Tesla is an electric vehicle and clean energy company that designs, manufactures, and sells electric cars, solar energy products, and energy storage solutions. The company is known for its innovative technology and sustainable practices.",
-    "example_title": "Electric vehicles and clean energy",
+      "Tesla es una empresa de vehículos eléctricos y energía limpia que diseña, fabrica y vende coches eléctricos, productos de energía solar y soluciones de almacenamiento de energía. La empresa es conocida por su tecnología innovadora y sus prácticas sostenibles",
+    "example_title": "Vehículos eléctricos y energías limpias",
     "logo": "https://logotypes.dev/static/logos/tesla-wordmark-color.svg",
     "name": "Tesla",
-    "variant": "wordmark",
-    "version": "color",
-    "id": 5
+    "id": 5,
   },
   {
     "example_description":
-      "Twitter is a social media platform that enables users to share and discover content in real time. The platform is known for its short-form messaging, or tweets, and has become a popular tool for news, entertainment, and communication.",
-    "example_title": "Real-time social media platform",
+      "Twitter es una plataforma de redes sociales que permite a los usuarios compartir y descubrir contenido en tiempo real. La plataforma es conocida por sus mensajes de formato corto, o tweets, y se ha convertido en una herramienta popular para noticias, entretenimiento y comunicación",
+    "example_title": "Plataforma de redes sociales en tiempo real",
     "logo": "https://logotypes.dev/static/logos/twitter-wordmark-color.svg",
     "name": "Twitter",
-    "variant": "wordmark",
-    "version": "color",
-    "id": 6
+    "id": 6,
   },
   {
     "example_description":
-      "Amazon is an e-commerce and technology company that provides online retail, cloud computing, and digital streaming services. The company is known for its wide range of products, competitive prices, and fast delivery options.",
-    "example_title": "Online retail and cloud services",
+      "Amazon es una empresa de comercio electrónico y tecnología que ofrece servicios de venta minorista en línea, computación en la nube y transmisión digital. La empresa es conocida por su amplia gama de productos, precios competitivos y opciones de entrega rápidas",
+    "example_title": "Venta minorista en línea y servicios en la nube",
     "logo": "https://logotypes.dev/static/logos/amazon-wordmark-color.svg",
     "name": "Amazon",
-    "variant": "wordmark",
-    "version": "color",
-    "id": 7
+    "id": 7,
   },
   {
     "example_description":
-      "Facebook is a social media platform that enables users to connect with friends, family, and communities. The platform is known for its news feed, messaging, and photo-sharing features, as well as its advertising and business tools.",
-    "example_title": "Connecting people and communities",
+      "Facebook es una plataforma de redes sociales que permite a los usuarios conectarse con amigos, familiares y comunidades. La plataforma es conocida por sus funciones de noticias, mensajería y uso compartido de fotos, así como por sus herramientas publicitarias y comerciales",
+    "example_title": "Conectando personas y comunidades",
     "logo": "https://logotypes.dev/static/logos/facebook-wordmark-color.svg",
     "name": "Facebook",
-    "variant": "wordmark",
-    "version": "color",
-    "id": 8
+    "id": 8,
   },
   {
     "example_description":
-      "Netflix is a streaming service that offers a wide variety of TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices. The platform is known for its original content, user-friendly interface, and personalized recommendations.",
-    "example_title": "Streaming TV shows and movies",
+      "Netflix es un servicio de streaming que ofrece una amplia variedad de programas de televisión, películas, anime, documentales y mucho más en miles de dispositivos conectados a Internet. La plataforma es conocida por su contenido original, su interfaz fácil de usar y sus recomendaciones personalizadas",
+    "example_title": "Transmisión de programas de TV y películas",
     "logo": "https://logotypes.dev/static/logos/netflix-wordmark-color.svg",
     "name": "Netflix",
-    "variant": "wordmark",
-    "version": "color",
-    "id": 9
+    "id": 9,
   },
   {
     "example_description":
-      "PayPal is a digital payments platform that enables users to send and receive money online. The platform is known for its secure transactions, buyer and seller protection, and ease of use for individuals and businesses.",
-    "example_title": "Digital payments platform",
+      "PayPal es una plataforma de pagos digitales que permite a los usuarios enviar y recibir dinero en línea. La plataforma es conocida por sus transacciones seguras, la protección de compradores y vendedores, y la facilidad de uso para particulares y empresas",
+    "example_title": "Plataforma de pagos digitales",
     "logo": "https://logotypes.dev/static/logos/paypal-wordmark-color.svg",
     "name": "PayPal",
-    "variant": "wordmark",
-    "version": "color",
-    "id": 10
+    "id": 10,
   },
   {
     "example_description":
-      "Reddit is a social news aggregation, web content rating, and discussion website. The platform is known for its user-generated content, community-driven discussions, and diverse range of topics and interests.",
-    "example_title": "Community-driven discussion platform",
+      "Reddit es un sitio web de agregación de noticias sociales, clasificación de contenido web y discusión. La plataforma es conocida por su contenido generado por los usuarios, sus debates impulsados por la comunidad y su diversa gama de temas e intereses",
+    "example_title": "Plataforma de debate impulsada por la comunidad",
     "logo": "https://logotypes.dev/static/logos/reddit-wordmark-color.svg",
     "name": "Reddit",
-    "variant": "wordmark",
-    "version": "color",
-    "id": 11
+    "id": 11,
   },
   {
     "example_description":
-      "Shopify is an e-commerce platform that enables individuals and businesses to create online stores and sell products. The platform is known for its user-friendly interface, customizable themes, and integrated payment options.",
-    "example_title": "E-commerce platform for online stores",
+      "Shopify es una plataforma de comercio electrónico que permite a particulares y empresas crear tiendas online y vender productos. La plataforma es conocida por su interfaz fácil de usar, temas personalizables y opciones de pago integradas",
+    "example_title": "Plataforma de comercio electrónico para tiendas online",
     "logo": "https://logotypes.dev/static/logos/shopify-wordmark-color.svg",
     "name": "Shopify",
-    "variant": "wordmark",
-    "version": "color",
-    "id": 12
+    "id": 12,
   },
   {
     "example_description":
-      "Slack is a collaboration hub that brings teams together to work, communicate, and collaborate. The platform is known for its messaging, file sharing, and integration features, as well as its customizable channels and workflows.",
-    "example_title": "Collaboration hub for teams",
+      "Slack es un centro de colaboración que reúne a los equipos para trabajar, comunicarse y colaborar. La plataforma es conocida por sus funciones de mensajería, intercambio de archivos e integración, así como por sus canales y flujos de trabajo personalizables",
+    "example_title": "Centro de colaboración para equipos",
     "logo": "https://logotypes.dev/static/logos/slack-wordmark-color.svg",
     "name": "Slack",
-    "variant": "wordmark",
-    "version": "color",
-    "id": 13
+    "id": 13,
   },
   {
     "example_description":
-      "Spotify is a digital music, podcast, and video streaming service that provides users with access to millions of songs and other content from artists and creators around the world. The platform is known for its personalized playlists, recommendations, and social sharing features.",
-    "example_title": "Music, podcast, and video streaming",
+      "Spotify es un servicio de transmisión de música digital, podcast y video que brinda a los usuarios acceso a millones de canciones y otros contenidos de artistas y creadores de todo el mundo. La plataforma es conocida por sus listas de reproducción personalizadas, recomendaciones y funciones para compartir en redes sociales",
+    "example_title": "Música, podcast y streaming de vídeo",
     "logo": "https://logotypes.dev/static/logos/spotify-wordmark-color.svg",
     "name": "Spotify",
-    "variant": "wordmark",
-    "version": "color",
-    "id": 14
+    "id": 14,
   },
   {
     "example_description":
-      "Twitch is a live streaming platform for gamers, creators, and communities. The platform is known for its interactive features, live chat, and diverse range of content, including gaming, music, and creative arts.",
-    "example_title": "Live streaming platform for gamers",
+      "Twitch es una plataforma de transmisión en vivo para jugadores, creadores y comunidades. La plataforma es conocida por sus funciones interactivas, chat en vivo y una amplia gama de contenidos, incluidos juegos, música y artes creativas",
+    "example_title": "Plataforma de transmisión en vivo para jugadores",
     "logo": "https://logotypes.dev/static/logos/twitch-wordmark-color.svg",
     "name": "Twitch",
-    "variant": "wordmark",
-    "version": "color",
-    "id": 15
+    "id": 15,
   },
   {
     "example_description":
-      "Uber is a technology company that provides ride-hailing, food delivery, and transportation services. The platform is known for its convenience, affordability, and safety features, as well as its global reach and innovative solutions.",
-    "example_title": "Ride-hailing and food delivery services",
+      "Uber es una empresa de tecnología que ofrece servicios de transporte, entrega de alimentos y transporte. La plataforma es conocida por sus características de comodidad, asequibilidad y seguridad, así como por su alcance global y soluciones innovadoras",
+    "example_title": "Servicios de transporte y entrega de alimentos",
     "logo": "https://logotypes.dev/static/logos/uber-wordmark-color.svg",
     "name": "Uber",
-    "variant": "wordmark",
-    "version": "color",
-    "id": 16
+    "id": 16,
   },
   {
     "example_description":
-      "Zoom is a video conferencing platform that enables users to connect and collaborate remotely. The platform is known for its high-quality video and audio, screen sharing, and recording features, as well as its ease of use for individuals and businesses.",
-    "example_title": "Video conferencing and collaboration",
+      "Zoom es una plataforma de videoconferencia que permite a los usuarios conectarse y colaborar de forma remota. La plataforma es conocida por sus funciones de grabación y video y audio de alta calidad, uso compartido de pantalla y grabación, así como por su facilidad de uso para particulares y empresas",
+    "example_title": "Videoconferencia y colaboración",
     "logo": "https://logotypes.dev/static/logos/zoom-wordmark-color.svg",
     "name": "Zoom",
-    "variant": "wordmark",
-    "version": "color",
-    "id": 17
+    "id": 17,
   },
   {
     "example_description":
-      "Airbnb is an online marketplace that enables individuals to rent out their properties or book accommodations around the world. The platform is known for its wide range of listings, user reviews, and secure booking options.",
-    "example_title": "Online marketplace for accommodations",
+      "Airbnb es un mercado en línea que permite a las personas alquilar sus propiedades o reservar alojamientos en todo el mundo. La plataforma es conocida por su amplia gama de listados, reseñas de usuarios y opciones de reserva seguras",
+    "example_title": "Mercado online de alojamientos",
     "logo": "https://logotypes.dev/static/logos/airbnb-wordmark-color.svg",
     "name": "Airbnb",
-    "variant": "wordmark",
-    "version": "color",
-    "id": 18
+    "id": 18,
   },
   {
     "example_description":
-      "Dropbox is a cloud storage platform that enables users to store, share, and collaborate on files and documents. The platform is known for its file synchronization, file sharing, and cloud backup features, as well as its user-friendly interface and integrations.",
-    "example_title": "Cloud storage and file sharing",
+      "Dropbox es una plataforma de almacenamiento en la nube que permite a los usuarios almacenar, compartir y colaborar en archivos y documentos. La plataforma es conocida por sus funciones de sincronización de archivos, uso compartido de archivos y copia de seguridad en la nube, así como por su interfaz e integraciones fáciles de usar",
+    "example_title": "Almacenamiento en la nube y uso compartido de archivos",
     "logo": "https://logotypes.dev/static/logos/dropbox-wordmark-color.svg",
     "name": "Dropbox",
-    "variant": "wordmark",
-    "version": "color",
-    "id": 19
+    "id": 19,
   },
   {
     "example_description":
-      "GitHub is a software development platform that enables developers to collaborate, share code, and build software. The platform is known for its version control, issue tracking, and project management features, as well as its community of developers and open-source projects.",
-    "example_title": "Software development and collaboration",
+      "GitHub es una plataforma de desarrollo de software que permite a los desarrolladores colaborar, compartir código y crear software. La plataforma es conocida por sus funciones de control de versiones, seguimiento de problemas y gestión de proyectos, así como por su comunidad de desarrolladores y proyectos de código abierto",
+    "example_title": "Desarrollo de software y colaboración",
     "logo": "https://logotypes.dev/static/logos/github-wordmark-color.svg",
     "name": "GitHub",
-    "variant": "wordmark",
-    "version": "color",
-    "id": 20 
+    "id": 20,
   },
   {
     "example_description":
-      "LinkedIn is a professional networking platform that enables users to connect with colleagues, clients, and industry professionals. The platform is known for its job search, recruitment, and professional development features, as well as its content sharing and networking tools.",
-    "example_title": "Professional networking and recruitment",
+      "LinkedIn es una plataforma de redes profesionales que permite a los usuarios conectarse con colegas, clientes y profesionales de la industria. La plataforma es conocida por sus funciones de búsqueda de empleo, contratación y desarrollo profesional, así como por sus herramientas de intercambio de contenidos y creación de redes",
+    "example_title": "Networking y contratación profesional",
     "logo": "https://logotypes.dev/static/logos/linkedin-wordmark-color.svg",
     "name": "LinkedIn",
-    "variant": "wordmark",
-    "version": "color",
-    "id": 21
+    "id": 21,
+  },
+  {
+    "example_description":
+      "WordPress es un sistema de gestión de contenidos que permite a los usuarios crear sitios web, blogs y tiendas online. La plataforma es conocida por sus temas personalizables, plugins y su interfaz fácil de usar, así como por su comunidad de código abierto y su ecosistema de desarrolladores",
+    "example_title": "Plataforma de creación de sitios web y blogs",
+    "logo": "https://logotypes.dev/static/logos/wordpress-wordmark-color.svg",
+    "name": "WordPress",
+    "id": 22,
+  },
+  {
+    "example_description":
+      "YouTube es una plataforma para compartir videos que permite a los usuarios subir, ver y compartir videos. La plataforma es conocida por su amplia gama de contenido, incluidos videos musicales, tutoriales y vlogs, así como por sus canales generados por los usuarios y opciones de monetización",
+    "example_title": "Plataforma de intercambio de videos y transmisión",
+    "logo": "https://logotypes.dev/static/logos/youtube-wordmark-color.svg",
+    "name": "YouTube",
+    "id": 23,
+  },
+  {
+    "example_description":
+      "Adobe es una empresa de software que ofrece soluciones creativas, de marketing y de gestión de documentos. La empresa es conocida por su conjunto de aplicaciones Adobe Creative Cloud, como Photoshop, Illustrator y Premiere Pro, así como por sus herramientas de marketing digital y firma electrónica",
+    "example_title": "Soluciones creativas, de marketing y documentales",
+    "logo": "https://logotypes.dev/static/logos/adobe-wordmark-color.svg",
+    "name": "Adobe",
+    "id": 24,
+  },
+  {
+    "example_description":
+      "IBM es una empresa de tecnología que proporciona hardware, software y servicios en la nube. La compañía es conocida por su plataforma IBM Cloud, las soluciones de inteligencia artificial Watson y las computadoras centrales, así como por sus servicios de investigación y consultoría",
+    "example_title": "Hardware, software y servicios en la nube",
+    "logo": "https://logotypes.dev/static/logos/ibm-wordmark-color.svg",
+    "name": "IBM",
+    "id": 25,
   }
 ];

@@ -1,38 +1,54 @@
 "use client";
-import { useState, useEffect  } from "react";
-import { useRouter, useSearchParams  } from "next/navigation";
-import { data as initialData } from "./api/DB.js"; 
-import './globals.css';
+import { useState, useEffect } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { data as initialData } from "./api/DB.js";
+import "./globals.css";
 
 export default function Home() {
   const router = useRouter();
   const [data, setData] = useState(initialData);
-  const searchParams = useSearchParams(); 
+  const searchParams = useSearchParams();
   const deleteId = searchParams.get("deleteId"); // ID recibido para eliminar
   const updatedId = searchParams.get("id"); // Startup editada
   const updatedName = searchParams.get("name");
   const updatedLogo = searchParams.get("logo");
   const updatedSlogan = searchParams.get("slogan");
   const updatedDescription = searchParams.get("description");
-  const [searchQuery, setSearchQuery] = useState(''); 
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     if (deleteId) {
-      setData((prevData) => prevData.filter((startup) => startup.id !== parseInt(deleteId)));
+      setData((prevData) =>
+        prevData.filter((startup) => startup.id !== parseInt(deleteId))
+      );
       router.replace("/"); // Limpiar el parámetro de la URL
     }
-  // Manejo de actualización
-  if (updatedId) {
-    setData((prevData) =>
-      prevData.map((startup) =>
-        startup.id === parseInt(updatedId)
-          ? { ...startup, name: updatedName, logo: updatedLogo, example_title: updatedSlogan, example_description: updatedDescription }
-          : startup
-      )
-    );
-    router.replace("/"); // Limpiar el parámetro de la URL
-  }
-}, [deleteId, updatedId, updatedName, updatedLogo, updatedSlogan, updatedDescription, router]);
+    // Manejo de actualización
+    if (updatedId) {
+      setData((prevData) =>
+        prevData.map((startup) =>
+          startup.id === parseInt(updatedId)
+            ? {
+                ...startup,
+                name: updatedName,
+                logo: updatedLogo,
+                example_title: updatedSlogan,
+                example_description: updatedDescription,
+              }
+            : startup
+        )
+      );
+      router.replace("/"); // Limpiar el parámetro de la URL
+    }
+  }, [
+    deleteId,
+    updatedId,
+    updatedName,
+    updatedLogo,
+    updatedSlogan,
+    updatedDescription,
+    router,
+  ]);
 
   const handleEdit = (e, id) => {
     e.preventDefault();
@@ -50,7 +66,7 @@ export default function Home() {
   return (
     <div className="row p-0 h-100">
       {/* Columna izquierda */}
-      <div className="col-4 py-4 px-5 bg-left" style={{ flexShrink: 0 }}>
+      <div className="col-4 py-4 px-5 bg-dark">
         <div className="row h-100 rounded-3 bg-secondary p-4 d-flex flex-column">
           <div className="col p-0">
             <div className="d-flex flex-row">
@@ -71,32 +87,34 @@ export default function Home() {
                       className="form-control form-control-lg"
                       id="nombre"
                       placeholder="Buscar"
-                      value={searchQuery} 
-                      onChange={handleSearchChange} 
+                      value={searchQuery}
+                      onChange={handleSearchChange}
                     />
                   </div>
                 </form>
               </div>
-              <div className="mt-3">
-                <button
-                  type="button"
-                  className="btn btn-primary btn-lg"
-                  onClick={() => router.push("/crear")} // Crear nueva startup
-                >
-                  Añadir nueva
-                </button>
-              </div>
             </div>
+          </div>
+          <div className="mt-auto p-0">
+            <button
+              type="button"
+              className="btn btn-dark btn-lg w-50"
+              onClick={() => router.push("/crear")} // Crear nueva startup
+            >
+              Añadir nueva
+            </button>
           </div>
         </div>
       </div>
       {/* Columna derecha */}
-      <div className="col-8 py-4 px-5" style={{ backgroundColor: '#6c757d' }}>
-        <div className="row h-100 rounded-3 bg-primary p-4">
-          <div className="divScroll row row-cols-1 row-cols-md-4 g-4 overflow-auto">
+      <div className="col-8 py-4 px-5 bg-secondary">
+        <div className="row h-100 rounded-3 bg-dark p-4">
+          <div className="divScroll row row-cols-1 row-cols-md-4 g-4 overflow-auto mt-2">
             {filteredData.map((startup) => (
-              <div key={startup.id} className="col">
-                <div className="divImg card text-center p-3 card-custom" style={{ height: '300px' }}>
+              <div key={startup.id} className="col mt-0 mb-4">
+                <div
+                  className="divImg card text-center p-3 card-custom hover-overlay w-100 hand-cursor"
+                >
                   <img
                     src={startup.logo}
                     alt={`${startup.name} logo`}

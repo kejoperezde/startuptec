@@ -1,5 +1,5 @@
-import localFont from "next/font/local";
-import "./globals.css"; 
+import { StartupProvider } from "./StartupContext";
+import "./globals.css";
 import Bootstrap from "./services/Bootstrap";
 
 export const metadata = {
@@ -12,8 +12,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Bootstrap />
       <body>
-        {}
-        <div className="container-fluid p-0 vh-100">{children}</div>
+        <StartupProvider>
+          <div className="container-fluid p-0 vh-100 overflow-hidden">
+            {children}
+          </div>
+        </StartupProvider>
       </body>
     </html>
   );
