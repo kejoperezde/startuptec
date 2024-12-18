@@ -74,7 +74,8 @@ export default function Home() {
       <div className="col-4 py-4 px-5 bg-dark">
         <div className="row h-100 rounded-3 bg-secondary p-4 d-flex flex-column">
           <div className="col p-0">
-            <div className="d-flex flex-row">
+            <div className="d-flex flex-row align-items-center">
+              <img src="/STARTUP.png" className="me-3" style={{width:"40px", height: "50px"}} />
               <h1>Startup TEC</h1>
             </div>
             <div className="d-flex flex-row mb-4">
