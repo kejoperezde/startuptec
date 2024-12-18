@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
       <Bootstrap />
       <body>
         <StartupProvider>
-          <div className="container-fluid p-0 vh-100 overflow-hidden">
+          <div className="container-fluid p-0 vh-100">
             {children}
           </div>
         </StartupProvider>

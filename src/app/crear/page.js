@@ -51,7 +51,7 @@ export default function Crear() {
   return (
     <div className="row p-0 h-100">
       {/* Columna Izquierda */}
-      <div className="col-4 py-4 px-5 bg-dark">
+      <div className="col-md-12 col-lg-4 py-4 px-5 bg-dark">
         <div className="row h-100 rounded-3 bg-secondary p-4 d-flex flex-column">
           <div className="col p-0">
             <div className="d-flex flex-row align-items-center">
@@ -89,7 +89,7 @@ export default function Crear() {
         </div>
       </div>
       {/* Columna derecha */}
-      <div className="col-8 py-4 px-5 bg-secondary">
+      <div className="col-md-12 col-lg-8 py-4 px-5 bg-secondary">
         <div className="row h-100 rounded-3 bg-dark p-4">
           {/* Formulario */}
           <form id="startupForm" onSubmit={onSubmit}>

@@ -59,7 +59,7 @@ export default function StartupDetails() {
 
   return (
     <div className="row p-0 h-100">
-      <div className="col-4 py-4 px-5 bg-dark">
+      <div className="col-md-12 col-lg-4 py-4 px-5 bg-dark">
         <div className="row h-100 rounded-3 bg-secondary p-4">
           <div className="col p-0">
             <div className="d-flex flex-row">
@@ -89,7 +89,7 @@ export default function StartupDetails() {
         </div>
       </div>
 
-      <div className="col-8 py-4 px-5 bg-secondary">
+      <div className="col-md-12 col-lg-8 py-4 px-5 bg-secondary">
         <div className="row h-100 rounded-3 bg-dark p-4 overflow-auto">
           <form>
             <div className="mb-3">

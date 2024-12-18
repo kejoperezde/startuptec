@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <div className="row p-0 h-100">
       {/* Columna izquierda */}
-      <div className="col-4 py-4 px-5 bg-dark">
+      <div className="col-md-12 col-lg-4 py-4 px-5 bg-dark ">
         <div className="row h-100 rounded-3 bg-secondary p-4 d-flex flex-column">
           <div className="col p-0">
             <div className="d-flex flex-row align-items-center">
@@ -68,7 +68,7 @@ export default function Home() {
         </div>
       </div>
       {/* Columna derecha */}
-      <div className="col-8 py-4 px-5 bg-secondary">
+      <div className="col-md-12 col-lg-8 py-4 px-5 bg-secondary ">
         <div className="row h-100 rounded-3 bg-dark p-4">
           <div className="divScroll row row-cols-1 row-cols-md-4 g-4 overflow-auto mt-2">
             {filteredData.map((startup) => (
