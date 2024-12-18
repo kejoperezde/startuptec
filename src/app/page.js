@@ -7,53 +7,8 @@ import { useStartups } from "./StartupContext";
 
 export default function Home() {
   const router = useRouter();
-  // const [data, setData] = useState(initialData);
   const { data } = useStartups();
   const [searchQuery, setSearchQuery] = useState("");
-
-
-  // const searchParams = useSearchParams();
-
-  /* const deleteId = searchParams.get("deleteId"); // ID recibido para eliminar
-  const updatedId = searchParams.get("id"); // Startup editada
-  const updatedName = searchParams.get("name");
-  const updatedLogo = searchParams.get("logo");
-  const updatedSlogan = searchParams.get("slogan");
-  const updatedDescription = searchParams.get("description"); */
-
-  /* useEffect(() => {
-    if (deleteId) {
-      setData((prevData) =>
-        prevData.filter((startup) => startup.id !== parseInt(deleteId))
-      );
-      router.replace("/"); // Limpiar el parámetro de la URL
-    }
-    // Manejo de actualización
-    if (updatedId) {
-      setData((prevData) =>
-        prevData.map((startup) =>
-          startup.id === parseInt(updatedId)
-            ? {
-                ...startup,
-                name: updatedName,
-                logo: updatedLogo,
-                example_title: updatedSlogan,
-                example_description: updatedDescription,
-              }
-            : startup
-        )
-      );
-      router.replace("/"); // Limpiar el parámetro de la URL
-    }
-  }, [
-    deleteId,
-    updatedId,
-    updatedName,
-    updatedLogo,
-    updatedSlogan,
-    updatedDescription,
-    router,
-  ]); */
 
   const handleEdit = (e, id) => {
     e.preventDefault();
