@@ -1,33 +1,51 @@
 "use client";
 
-import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { ArrowLeftCircleIcon } from "@heroicons/react/20/solid";
-import { data as initialData } from "../api/DB.js";
+// import { data as initialData } from "../api/DB.js";
+import { useStartups } from "../StartupContext";
 
 export default function Crear() {
-  const [data, setData] = useState(initialData);
   const router = useRouter();
+  const { addStartup, data } = useStartups();
 
   const onSubmit = (e) => {
     e.preventDefault(); // Previene recarga de la página
     const form = e.currentTarget;
     const formData = new FormData(form);
 
-    // Crea un nuevo objeto con los datos del formulario
-    const newStartup = {
-      id: data.length + 1,
-      name: formData.get("nombre"),
-      logo: formData.get("logotipo"),
-      example_title: formData.get("slogan"),
-      example_description: formData.get("descripcion"),
-    };
+    let nameF = formData.get("nombre")
+    let logoF = formData.get("logotipo")
+    let exampleTitleF = formData.get("slogan")
+    let exampleDescriptionF = formData.get("descripcion")
 
-    // Actualiza el estado con el nuevo startup
-    setData([...data, newStartup]);
+    // Para validar formulario
+    const missingFields = [];
 
-    // Navega de vuelta al inicio
-    router.push("/");
+    if (!nameF) missingFields.push("nombre");
+    if (!logoF) missingFields.push("logotipo");
+    if (!exampleTitleF) missingFields.push("slogan");
+    if (!exampleDescriptionF) missingFields.push("descripcion");
+
+    if (missingFields.length > 0) {
+      alert(`Faltan datos en los campos: ${missingFields.join(", ")}`);
+    } else {
+      // Crea un nuevo objeto con los datos del formulario
+      const newStartup = {
+        id: data.length + 1,
+        name: nameF,
+        logo: logoF,
+        example_title: exampleTitleF,
+        example_description: exampleDescriptionF,
+      };
+
+      // Actualiza el estado con el nuevo startup
+      addStartup(newStartup);
+      alert("Startup creada con éxito");
+
+      // Navega de vuelta al inicio
+      router.push("/");
+    }
   };
 
   return (

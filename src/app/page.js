@@ -1,22 +1,27 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { data as initialData } from "./api/DB.js";
-import "./globals.css";
+// import { data as initialData } from "./api/DB.js";
+// import "../globals.css";
+import { useStartups } from "./StartupContext";
 
 export default function Home() {
   const router = useRouter();
-  const [data, setData] = useState(initialData);
-  const searchParams = useSearchParams();
-  const deleteId = searchParams.get("deleteId"); // ID recibido para eliminar
+  // const [data, setData] = useState(initialData);
+  const { data } = useStartups();
+  const [searchQuery, setSearchQuery] = useState("");
+
+
+  // const searchParams = useSearchParams();
+
+  /* const deleteId = searchParams.get("deleteId"); // ID recibido para eliminar
   const updatedId = searchParams.get("id"); // Startup editada
   const updatedName = searchParams.get("name");
   const updatedLogo = searchParams.get("logo");
   const updatedSlogan = searchParams.get("slogan");
-  const updatedDescription = searchParams.get("description");
-  const [searchQuery, setSearchQuery] = useState("");
+  const updatedDescription = searchParams.get("description"); */
 
-  useEffect(() => {
+  /* useEffect(() => {
     if (deleteId) {
       setData((prevData) =>
         prevData.filter((startup) => startup.id !== parseInt(deleteId))
@@ -48,7 +53,7 @@ export default function Home() {
     updatedSlogan,
     updatedDescription,
     router,
-  ]);
+  ]); */
 
   const handleEdit = (e, id) => {
     e.preventDefault();

@@ -3,16 +3,20 @@
 import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { ArrowLeftCircleIcon } from "@heroicons/react/20/solid";
-import "../globals.css";
-import { data as initialData } from "../api/DB.js";
+// import "../globals.css";
+// import { data as initialData } from "../api/DB.js";
+import { useStartups } from "../StartupContext";
 
 export default function StartupDetails() {
+  const router = useRouter();
+  const { data, updateStartup, deleteStartup } = useStartups();
+
   const searchParams = useSearchParams();
   const id = searchParams.get("id");
-  const router = useRouter();
-  const [data, setData] = useState(initialData);
+  // const [data, setData] = useState(initialData);
   const [startup, setStartup] = useState(() =>
-    initialData.find((item) => item.id === parseInt(id))
+    // initialData.find((item) => item.id === parseInt(id))
+    data.find((item) => item.id === parseInt(id))
   );
 
   if (!startup) {
@@ -25,8 +29,10 @@ export default function StartupDetails() {
       "¿Estás seguro de que deseas eliminar esta startup?"
     );
     if (confirmEdit) {
-      router.push(`/?deleteId=${startup.id}`);
       e.preventDefault();
+      // router.push(`/?deleteId=${startup.id}`);
+      deleteStartup(startup.id);
+      router.push("/");
     }
   };
 
@@ -37,16 +43,17 @@ export default function StartupDetails() {
     );
 
     if (confirmEdit) {
-      // Pasar los datos actualizados como query params a la página principal
-      const query = new URLSearchParams({
+      // Startup con los datos actualizados
+      const query = {
         id: startup.id,
         name: startup.name,
         logo: startup.logo,
         slogan: startup.example_title,
         description: startup.example_description,
-      }).toString();
-
-      router.push(`/?${query}`);
+      }
+      
+      updateStartup(startup.id, query);
+      router.push("/");
     }
   };
 
