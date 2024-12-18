@@ -127,20 +127,6 @@ export default function Home() {
                     onClick={(e) => handleEdit(e, startup.id)}
                   />
                   <h5 className="card-title">{startup.name}</h5>
-                  {/* <div className="d-flex justify-content-between mt-auto">
-                    <button
-                      className="btn btn-danger btn-sm"
-                      onClick={() => handleDelete(startup.id)}
-                    >
-                      Eliminar
-                    </button>
-                    <button
-                      className="btn btn-warning btn-sm"
-                      onClick={() => handleEdit(startup.id)}
-                    >
-                      Editar
-                    </button>
-                  </div> */}
                 </div>
               </div>
             ))}
