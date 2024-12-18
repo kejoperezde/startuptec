@@ -48,10 +48,10 @@ export default function StartupDetails() {
         id: startup.id,
         name: startup.name,
         logo: startup.logo,
-        slogan: startup.example_title,
-        description: startup.example_description,
+        example_title: startup.example_title,
+        example_description: startup.example_description,
       }
-      
+
       updateStartup(startup.id, query);
       router.push("/");
     }

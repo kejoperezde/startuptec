@@ -1,0 +1,19 @@
+Nombre: Discord
+Logo: https://logotypes.dev/static/logos/discord-glyph-color.svg
+Eslogan: Conecta y comunica con comunidades
+Descripción: Discord ofrece una plataforma para crear y gestionar comunidades con comunicación por texto, voz y video. Interactúa con amigos, únete a servidores y construye comunidades con las versátiles funciones de chat y colaboración de Discord.
+
+Nombre: Ebay
+Logo: https://logotypes.dev/static/logos/ebay-glyph-color.svg
+Eslogan: Mercado global para comprar y vender
+Descripción: eBay es un mercado global donde puedes comprar y vender una amplia variedad de productos. Desde electrónicos hasta artículos de colección, eBay conecta a compradores y vendedores con formatos de subasta y precio fijo, ofreciendo una experiencia de compra diversa.
+
+Nombre: Honda
+Logo: https://logotypes.dev/static/logos/honda-wordmark-color.svg
+Eslogan: Innovación en ingeniería automotriz
+Descripción: Honda es reconocida por su innovación en ingeniería automotriz, ofreciendo una gama de vehículos que incluye autos y motocicletas. Experimenta fiabilidad, rendimiento y tecnología avanzada con la diversa línea de vehículos de Honda.
+
+Nombre: Instagram
+Logo: https://logotypes.dev/static/logos/instagram-glyph-color.svg
+Eslogan: Comparte momentos y conéctate con otros
+Descripción: Instagram es una plataforma de redes sociales para compartir momentos y conectar con otros. Publica fotos, historias y videos, interactúa con tus seguidores y explora contenido de todo el mundo con la vibrante comunidad de Instagram.
